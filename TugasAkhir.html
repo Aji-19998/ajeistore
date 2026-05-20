@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Webstie Store Ajii</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+      background-image: url(https://m.gettywallpapers.com/wp-content/uploads/2023/06/HD-Aesthetic-White-Laptop-Wallpaper.jpg);
+    }
+    header {
+      background: linear-gradient(90deg, #000000, #333333);
+      color: rgb(235, 235, 235);
+      text-align: center;
+      padding: 25px;
+      background-image: url(https://tw.bao-yi.com/wp-content/uploads/2020/04/HESS3a.jpg);
+    }
+    header h1 {
+      color: #00aaff;
+      margin-bottom: 5px;
+    }
+    nav {
+      background-color: #111;
+      text-align: center;
+      padding: 10px 0;
+      width: 100%;
+      top: 0;
+      position: fixed;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 15px;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #0ca6d9;
+    }
+    .container {
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .product {
+      background-color: white;
+      width: 250px;
+      text-align: center;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+    .product:hover {
+      transform: scale(1.05);
+    }
+    .product img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .product h3 {
+      margin-top: 10px;
+      color: #222;
+    }
+    .product p {
+      color: #555;
+    }
+    button {
+      background-color: #ff3333;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #cc0000;
+    }
+    #kontak {
+      background-color: #fff9f9;
+      margin: 30px auto;
+      max-width: 500px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      margin-top: 10%;
+    }
+    footer {
+      background-color: #000;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+
+    #Tentang {
+      background-color: #fff9f9;
+      margin: 30px auto;
+      max-width: 500px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      margin-bottom: 10%;
+      margin-top: 10%;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>AjeeStorze</h1>
+    <p>Tshirt Hoodie Kalcer Ada Di Sini Coyy! </p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#Tentang">Tentang</a>
+    <a href="#produk">Product</a>
+    <a href="#kontak">Kontak Kami</a>
+  </nav>
+
+  <div id="Tentang">
+    <p> Toko ini menyediakan hoodie dan tshirt kalcer muu boloo , yang dari merek chambre de la vian , calle , dan snsb. Jika kalian mau memesan / preorder , silahkan langsung saja ke bagian kontak kami</p>
+  </div>
+
+
+  <div class="container" id="produk">
+    <div class="product">
+      <img src="hoodie_chambre.jpeg" alt="Chambre Hoodie">
+      <h3>Chambre Hoodie</h3>
+      <p>Rp 1.200.000</p>
+      <button onclick="beliProduk('Chambre Hoodie')">Buy Noww</button>
+    </div>
+
+    <div class="product">
+      <img src="hoodie_calle.jpeg" alt="CALLE Hoodie">
+      <h3>CALLE Hoodie</h3>
+      <p>Rp 780.000</p>
+      <button onclick="beliProduk('CALLE Hoodie')">Buy Noww</button>
+    </div>
+
+    <div class="product">
+      <img src="tshirt_snsb.jpeg" alt="SNSB Oversized Tee">
+      <h3>SNSB Oversized Tee</h3>
+      <p>Rp 210.000</p>
+      <button onclick="beliProduk('SNSB Oversized Tee')">Buy Noww</button>
+    </div>
+  </div>
+
+  <div id="kontak">
+  <h2>Kontak Mee</h2>
+
+  <form id="formKontak" onsubmit="kirimPesan(event)">
+
+    <div class="input-group">
+      <label for="nama">Nama Anda</label>
+      <input type="text" id="nama" name="nama" required>
+    </div>
+
+    <div class="input-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+
+    <div class="input-group">
+      <label for="pesan">Pesan</label>
+      <textarea id="pesan" name="pesan" rows="5" required></textarea>
+    </div>
+
+    <button type="submit">Kirim Pesan</button>
+  </form>
+</div>
+
+  <footer>
+    <p>&copy;  AjeeStorzee | Desain By Ajeei</p>
+  </footer>
+
+  <script>
+    const brand = "AJEESTROZE";
+    console.log("Selamat datang di " + brand);
+
+    function beliProduk(namaProduk) {
+      alert("Kamu memilih " + namaProduk + " \n Terima kasih telah berbelanja di " + brand + "!");
+      console.log("Produk dibeli:", namaProduk);
+    }
+
+    function hubungi() {
+      alert("Hubungi kami di WhatsApp 082180997006 kaloo nak mesen e (: ");
+      console.log("Tombol kontak diklik!");
+    }
+  </script>
+</body>
+</html>
